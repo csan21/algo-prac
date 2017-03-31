@@ -1,3 +1,3 @@
 # Ruby Algorithms
 
-Just randomly adding algorithms for practice
+Just sporadically adding algorithms for practice
