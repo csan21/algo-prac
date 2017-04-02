@@ -27,3 +27,19 @@ end
 def palindrome?(str)
   str == str.reverse
 end
+
+
+# binary search recursion with 4 args, returns index of obj
+def binary_search(arr, obj, front = 0, back = arr.length-1)
+  i = arr[front..back].length / 2 + front
+  return nil if front == back
+  return i if arr[i] == obj
+
+  if arr[i] < obj
+    binary_search(arr, obj, i, back)
+  elsif arr[i] > obj
+    binary_search(arr, obj, front, i)
+  end
+end
+# array = [:A, :B, :C, :D, :E, :F, :G, :H]
+# binary_search(array, :E)
