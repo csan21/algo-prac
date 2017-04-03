@@ -43,3 +43,22 @@ def binary_search(arr, obj, front = 0, back = arr.length-1)
 end
 # array = [:A, :B, :C, :D, :E, :F, :G, :H]
 # binary_search(array, :E)
+
+
+# fizzbuzz with 15
+def fizzbuzz?(n)
+  case
+  when n % 15 == 0 then "FizzBuzz"
+  when n % 5 == 0 then "Fizz"
+  when n % 3 == 0 then "Buzz"
+  end
+end
+
+# fizzbuzz without 15
+def fizzbuzz?(n)
+  case
+  when n % 5 && n % 3 == 0 then "FizzBuzz"
+  when n % 5 == 0 then "Fizz"
+  when n % 3 == 0 then "Buzz"
+  end
+end
