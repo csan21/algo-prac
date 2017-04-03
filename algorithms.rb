@@ -30,15 +30,15 @@ end
 
 
 # binary search recursion with 4 args, returns index of obj
-def binary_search(arr, obj, front = 0, back = arr.length-1)
-  i = arr[front..back].length / 2 + front
-  return nil if front == back
-  return i if arr[i] == obj
+def binary_search(array, obj, min = 0, max = arr.length-1)
+  mid = array[min..max].length / 2 + min
+  return nil if min == max
+  return mid if array[mid] == obj
 
-  if arr[i] < obj
-    binary_search(arr, obj, i, back)
-  elsif arr[i] > obj
-    binary_search(arr, obj, front, i)
+  if array[mid] < obj
+    binary_search(array, obj, mid, max)
+  elsif array[mid] > obj
+    binary_search(array, obj, min, mid)
   end
 end
 # array = [:A, :B, :C, :D, :E, :F, :G, :H]
@@ -49,8 +49,8 @@ end
 def fizzbuzz?(n)
   case
   when n % 15 == 0 then "FizzBuzz"
-  when n % 5 == 0 then "Fizz"
-  when n % 3 == 0 then "Buzz"
+  when n % 5 == 0 then "Buzz"
+  when n % 3 == 0 then "Fizz"
   end
 end
 
@@ -58,7 +58,7 @@ end
 def fizzbuzz?(n)
   case
   when n % 5 && n % 3 == 0 then "FizzBuzz"
-  when n % 5 == 0 then "Fizz"
-  when n % 3 == 0 then "Buzz"
+  when n % 5 == 0 then "Buzz"
+  when n % 3 == 0 then "Fizz"
   end
 end
