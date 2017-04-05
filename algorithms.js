@@ -17,3 +17,11 @@ var binarySearch = function(array, obj, min, max) {
 // var min = 0;
 // var max = array.length-1
 // binarySearch(array, obj, min, max)
+
+
+// palindrome check
+var palindrome = function(string) {
+  return string == string.split('').reverse().join('');
+}
+// palindrome("hello")
+// palindrome("wow")
