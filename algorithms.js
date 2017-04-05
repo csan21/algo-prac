@@ -9,7 +9,7 @@ var binarySearch = function(array, obj, min, max) {
   } else if (array[mid] < obj) {
     return binarySearch(array, obj, mid, max);
   } else if (array[mid] > obj) {
-    return binarSearch(array, obj, min, mid)
+    return binarySearch(array, obj, min, mid)
   }
 }
 // var array = [1,2,3,4,5,6,7,8,9,10];
