@@ -62,3 +62,23 @@ def fizzbuzz?(n)
   when n % 3 == 0 then "Fizz"
   end
 end
+
+
+# bubble sort
+def bubble_sort(arr)
+  n = arr.length
+  loop do
+    swapped = false
+
+    (n-1).times do |i|
+      if arr[i] > arr[i+1]
+        arr[i], arr[i+1] = arr[i+1], arr[i]
+        swapped = true
+      end
+    end
+
+    break if not swapped
+  end
+
+  array
+end
