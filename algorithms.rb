@@ -116,3 +116,15 @@ def merge_sort(array)
 
   return merge.call merge_sort(left), merge_sort(right)
 end
+
+
+# mirror symmetry
+def is_symmetric(root)
+  return true if root.nil?
+  mirror(root.left, root.right)
+end
+
+def mirror(a,b)
+  return a == b if (a == nil || b == nil)
+  a.val == b.val && mirror(a.left, b.right) && mirror(a.right,b.left)
+end
