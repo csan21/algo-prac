@@ -1,5 +1,4 @@
 class Stack
-  
   # Return a new Stack
   def initialize
     self.clear
@@ -42,5 +41,4 @@ class Stack
   def clear
     @array = Array.new
   end
-
 end
