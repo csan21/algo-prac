@@ -1,3 +1,3 @@
-# Algorithm Practice
+# Algorithm & Data Structure Practice
 
-Just sporadically adding algorithms for practice in different languages.
+Just sporadically adding algorithms & data structures for practice in different languages.
