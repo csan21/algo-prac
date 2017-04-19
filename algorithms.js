@@ -25,3 +25,19 @@ var palindrome = function(string) {
 }
 // palindrome("hello")
 // palindrome("wow")
+
+
+// bubble sort
+var bubbleSort = function(array) {
+  for (var i = array.length - 1; i >= 0; i--){
+    for(var j = 1; j <= i; j++){
+      if(array[j-1] > array[j]){
+        var temp = array[j-1];
+        array[j-1] = array[j];
+        array[j] = temp;
+      }
+    }
+  }
+  return array
+}
+// bubbleSort([6,8,1,2,4,5]) output: [ 1, 2, 4, 5, 6, 8 ]
