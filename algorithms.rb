@@ -21,13 +21,14 @@ end
 def hard_reverse(str)
   str.chars.reduce{ |x,y| y+x }
 end
-
+# hard_reverse("hello") output: "olleh"
 
 # palindrome check
 def palindrome?(str)
   str == str.reverse
 end
-
+# palindrome?("wow") output: true
+# palindrome?("hello") output: false
 
 # binary search recursion with 4 args, returns index of obj
 def binary_search(array, obj, min = 0, max = arr.length-1)
