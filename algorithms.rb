@@ -8,14 +8,14 @@ def fib_it(num)
   end
   array[num]
 end
-
+# fib_it(5) output: 5
 
 # fibonacci recursion
 def fib(num)
   return num if num == 0 || num == 1
   fib(num - 1) + fib(num - 2)
 end
-
+# fib(5) output: 5
 
 # simple string reverse without .reverse
 def hard_reverse(str)
