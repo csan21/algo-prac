@@ -16,15 +16,15 @@ var binarySearch = function(array, obj, min, max) {
 // var obj = 3;
 // var min = 0;
 // var max = array.length-1
-// binarySearch(array, obj, min, max)
+// binarySearch(array, obj, min, max) output: returns index 2 for obj
 
 
 // palindrome check
 var palindrome = function(string) {
   return string == string.split('').reverse().join('');
 }
-// palindrome("hello")
-// palindrome("wow")
+// palindrome("hello") output: false
+// palindrome("wow") output: true
 
 
 // bubble sort
