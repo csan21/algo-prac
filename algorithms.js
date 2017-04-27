@@ -1,3 +1,17 @@
+// linear search
+var linearSearch = function(array, obj) {
+  for(var i = 0; i < array.length; ++i) {
+    if (array[i] == obj) {
+      return i;
+    }
+  }
+  return -1;
+}
+// var array = [1,2,3,4,5,6,7,8,9,10];
+// var obj = 6;
+// linearSearch(array, obj) output: returns index 5 for obj
+
+
 // binary search recursive
 var binarySearch = function(array, obj, min, max) {
   var mid = Math.floor((max-min)/2) + min;
