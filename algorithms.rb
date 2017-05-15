@@ -31,8 +31,8 @@ end
 # palindrome?("hello") output: false
 
 # binary search recursion with 4 args, returns index of obj
-def binary_search(array, obj, min = 0, max = arr.length-1)
-  mid = array[min..max].length / 2 + min
+def binary_search(array, obj, min = 0, max = array.length-1)
+  mid = array[min..max].length / 2
   return nil if min == max
   return mid if array[mid] == obj
 
