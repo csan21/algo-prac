@@ -43,7 +43,7 @@ var palindrome = function(string) {
 
 // bubble sort
 var bubbleSort = function(array) {
-  for (var i = array.length - 1; i >= 0; i--){
+  for (var i = array.length - 1; i >= 0; i--) {
     for (var j = 1; j <= i; j++) {
       if (array[j-1] > array[j]) {
         var temp = array[j-1];
@@ -55,3 +55,24 @@ var bubbleSort = function(array) {
   return array
 }
 // bubbleSort([6,8,1,2,4,5]) output: [ 1, 2, 4, 5, 6, 8 ]
+
+
+// merge sort in 2 functions
+var mergeSort = function(list) {
+  if (list.length <= 1)
+    return list;
+
+  var mid   = Math.floor(list.length / 2),
+  var left  = list.slice(0, mid),
+  var right = list.slice(mid, list.length);
+
+    return merge(mergeSort(left), mergeSort(right))
+}
+
+var merge = function(left, right) {
+  var temp = [];
+  while (left && left.length > 0 && right && right.length > 0) {
+    temp.push(left[0] <= right[0]? left.shift() : right.shift());
+  }
+  return temp.concat(left, right);
+}
