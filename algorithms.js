@@ -62,8 +62,8 @@ var mergeSort = function(list) {
   if (list.length <= 1)
     return list;
 
-  var mid   = Math.floor(list.length / 2),
-  var left  = list.slice(0, mid),
+  var mid   = Math.floor(list.length / 2);
+  var left  = list.slice(0, mid);
   var right = list.slice(mid, list.length);
 
     return merge(mergeSort(left), mergeSort(right))
@@ -76,3 +76,5 @@ var merge = function(left, right) {
   }
   return temp.concat(left, right);
 }
+// nums = [10,9,8,7,6,5,5,5,4,3,2,1]
+// mergeSort(nums) output: [ 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9, 10 ]
