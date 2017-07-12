@@ -14,7 +14,7 @@ var linearSearch = function(array, obj) {
 
 // binary search recursive
 var binarySearch = function(array, obj, min, max) {
-  var mid = Math.floor((max-min)/2) + min;
+  var mid = Math.floor((max-min)/2);
 
   if (array[mid] === obj) {
     return mid;
